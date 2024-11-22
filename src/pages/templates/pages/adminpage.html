@@ -1,0 +1,13 @@
+<h1>Page for admins</h1>
+<hr>
+<b>You can view and delete bad posts here</b>
+<ul>
+{% for note, id in notes %}
+<li>{{ note }}</li>
+<form method="POST" action="/delete/{{ id }}">
+<!--{% csrf_token %}-->
+<button type="submit">delete</button>
+</form>
+{% endfor %}
+</ul>
+<a href="notes">To notes page</a>

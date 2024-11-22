@@ -1,0 +1,13 @@
+<h1>Search for your notes</h1>
+
+<form action="/notesearch" method="POST">
+    <!--{% csrf_token %}-->
+    Your note should include this text: 
+    <br>
+    <input type="text" name="note">
+    <br>
+    <input type="submit" value="search">
+    <br>
+</form>
+
+<a href="notes">To notes page</a>

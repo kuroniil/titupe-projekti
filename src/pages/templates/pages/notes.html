@@ -1,0 +1,22 @@
+<h1>Notes page</h1>
+<p>
+you are logged in as {{ user }} 
+<a href="/logout">logout</a>
+</p>
+add a new note <a href="/newnote">here</a>
+<p>
+look for a specific note <a href="/notesearch">here</a>
+</p>
+<h2>Your notes:</h2>
+{% for note in notes %}
+<ul>
+    <li>{{ note | safe }}</li>
+</ul>
+{% endfor %}
+<h2>Public notes</h2>
+{% for note in publicnotes %}
+<ul>
+    <li>{{ note | safe }}</li>
+    <!--<li>{{ note }}</li>-->
+</ul>
+{% endfor %}

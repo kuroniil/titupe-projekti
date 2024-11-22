@@ -1,0 +1,22 @@
+<h1>Add a new note</h1>
+<hr>
+<b>You can use html-tags in your notes!</b>
+<p>Add a private note</p>
+<form action="/newnote" method="POST">
+    <!--{% csrf_token %}-->
+    <textarea name="note" rows="5" cols="50"></textarea>
+    <p>
+    <input type="submit" value="add">
+    </p>
+</form>
+
+Add a new note/message for everyone to see on their notes page. 
+<form action="/newpublicnote" method="POST">
+    <!--{% csrf_token %}-->
+    <textarea name="publicnote" rows="5" cols="50"></textarea>
+    <p>
+    <input type="submit" value="add">
+    </p>
+</form>
+
+<a href="notes">To notes page</a>

@@ -1,0 +1,16 @@
+<h1>Notes webapp</h1>
+{% if user.username == '' %}
+<hr>
+<p>
+    Not registered? Register <a href="/register">here</a>
+</p>
+<form action="/" method="POST">
+    <!--{% csrf_token %}-->
+    username: <input type="username" name="username">
+    <br>
+    password: <input type="password" name="password">
+    <input type="submit" value="login">
+</form>
+{% else %}
+you are logged in <a href="/logout">logout</a>
+{% endif %}
