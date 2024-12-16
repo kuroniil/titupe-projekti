@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Main page{% endblock %}
+{% block content %}
 <h1>Notes webapp</h1>
 {% if user.username == '' %}
 <hr>
@@ -6,11 +9,17 @@
 </p>
 <form action="/" method="POST">
     <!--{% csrf_token %}-->
-    username: <input type="username" name="username">
-    <br>
-    password: <input type="password" name="password">
+    <b>Username:</b>
+    <p>
+        <input placeholder="Username" type="username" name="username">
+    </p>
+    <b>Password:</b>
+    <p>
+        <input placeholder="Password" type="password" name="password">
+    </p>
     <input type="submit" value="login">
 </form>
 {% else %}
 you are logged in <a href="/logout">logout</a>
 {% endif %}
+{% endblock %}

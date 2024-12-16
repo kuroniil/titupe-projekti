@@ -1,6 +1,9 @@
+{% extends "base.html" %}
+{% block title %}New note page{% endblock %}
+{% block content %}
 <h1>Add a new note</h1>
 <hr>
-<b>You can use html-tags in your notes!</b>
+<b><h3>You can use html-tags in your notes!</h3></b>
 <p>Add a private note</p>
 <form action="/newnote" method="POST">
     <!--{% csrf_token %}-->
@@ -10,7 +13,7 @@
     </p>
 </form>
 
-Add a new note/message for everyone to see on their notes page. 
+<p>Add a new note/message for everyone to see on their notes page.</p>
 <form action="/newpublicnote" method="POST">
     <!--{% csrf_token %}-->
     <textarea name="publicnote" rows="5" cols="50"></textarea>
@@ -20,3 +23,4 @@ Add a new note/message for everyone to see on their notes page.
 </form>
 
 <a href="notes">To notes page</a>
+{% endblock %}

@@ -1,13 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Admin page{% endblock %}
+{% block content %}
 <h1>Page for admins</h1>
 <hr>
-<b>You can view and delete bad posts here</b>
-<ul>
+<b><h3>You can view and delete bad posts here</h3></b>
 {% for note, id in notes %}
-<li>{{ note }}</li>
-<form method="POST" action="/delete/{{ id }}">
-<!--{% csrf_token %}-->
-<button type="submit">delete</button>
-</form>
+    <form method="POST" action="/delete/{{ id }}">
+        <!--{% csrf_token %}-->
+        <div class="note">
+            {{ note }} <button type="submit">delete</button>
+        </div>
+    </form>
 {% endfor %}
-</ul>
 <a href="notes">To notes page</a>
+{% endblock %}

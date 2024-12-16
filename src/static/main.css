@@ -1,0 +1,127 @@
+:root {
+    --text: #EBECD0;
+    --text-bright: #FFF;
+    --text-toned: #BBB;
+  
+    --theme-hue: 0deg;
+    --theme-sat: 0%;
+    --theme-lum: 40%;
+  
+    --accent-hue: calc(var(--theme-hue) + 15deg);
+    --accent-sat: 100%;
+    --accent-lum: 50%;
+    --accent-sat-light: 85%;
+  
+    --background-hue: calc(var(--theme-hue) - 90deg);
+    --background-sat: calc(var(--theme-sat) - 30%);
+    --background-lum: calc(var(--theme-lum) - 2.5%);
+    --background-lum-very-light: calc(var(--theme-lum) + 30%);
+    --background-lum-light: calc(var(--theme-lum) + 2.5%);
+    --background-lum-dark: calc(var(--theme-lum) - 8.5%);
+  
+    --background: hsl(var(--background-hue), var(--background-sat), var(--background-lum));
+    --background-light: hsl(var(--background-hue), var(--background-sat), var(--background-lum-light));
+    --background-dark: hsl(var(--background-hue), var(--background-sat), var(--background-lum-dark));
+  
+    --border-lum: calc(var(--theme-lum) + 5%);
+    --border-lum-light: calc(var(--theme-lum) + 15%);
+  
+    --border-color: hsl(var(--background-hue), var(--background-sat), var(--border-lum));
+    --border-color-light: hsl(var(--background-hue), var(--background-sat), var(--border-lum-light));
+    --border-color-bright: hsl(var(--background-hue), var(--background-sat), 100%);
+  
+    --accent-color: hsl(var(--accent-hue), var(--accent-sat), var(--accent-lum));
+    --accent-color-dark: hsl(var(--theme-hue), var(--accent-sat), var(--accent-lum));
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+
+    display: flex;
+    flex-flow: column;
+  
+    margin: 0;
+    height: 100vh;
+  
+    background: var(--background);
+    color: var(--text-toned);
+  }
+  
+  input,
+  textarea {
+    padding: 0.5em;
+    color: white;
+    border: 1px solid var(--border-color-light);
+    border-radius: 0.375em;
+    background: var(--background);
+  }
+  
+  input[type="submit"],
+  input[type="button"] {
+    border: 1px solid var(--border-color-bright);
+    background-color: var(--background-light);
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--text-toned)
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b {
+    color: var(--text);
+  }
+  
+  p,
+  a,
+  i,
+  b {
+    color: var(--text-toned);
+  }
+  
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: var(--text-bright);
+  }
+  
+  .content {
+    margin: 0 auto;
+    height: 100vh;
+    padding: 2em 8em;
+    border-radius: 0.5em;
+    width: 100%;
+    max-width: 50em;
+    background: var(--background-dark);
+  }
+
+
+  .note {
+    margin: 0.5em 0;
+    padding: 1em 2em;
+    border-radius: 0.375em;
+    background: var(--background-light);
+    word-wrap: break-word;
+  }
+
+  .note button{
+    border: 1px solid var(--border-color-bright);
+    background: hsl(var(--background-hue), var(--background-sat), var(--background-lum-very-light));
+    color: var(--text-bright);
+    cursor: pointer;
+    border-radius: 0.375em;
+    float: right;
+    
+  }
+
+  .note button:hover {
+    background-color: var(--text);
+  }

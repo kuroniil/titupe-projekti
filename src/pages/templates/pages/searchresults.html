@@ -1,11 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Search results page{% endblock %}
+{% block content %}
 <h1>Search results</h1>
 
-<ul>
 {% for note in notes %}
-<li>
-{{ note }}
-</li>
+<div class="note">
+    {{ note }}
+</div>
 {% endfor %}
-</ul>
-
+<p>
 <a href="notes">To notes page</a>
+</p>
+
+{% endblock %}

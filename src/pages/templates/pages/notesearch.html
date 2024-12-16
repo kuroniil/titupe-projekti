@@ -1,13 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Note search page{% endblock %}
+{% block content %}
 <h1>Search for your notes</h1>
 
 <form action="/notesearch" method="POST">
     <!--{% csrf_token %}-->
     Your note should include this text: 
-    <br>
-    <input type="text" name="note">
-    <br>
-    <input type="submit" value="search">
-    <br>
+    <p>
+        <input type="text" name="note">
+        <input type="submit" value="search">
+    </p>
 </form>
 
 <a href="notes">To notes page</a>
+{% endblock %}

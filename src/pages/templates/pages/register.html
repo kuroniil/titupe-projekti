@@ -1,10 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Register page{% endblock %}
+{% block content %}
 <h1>Create a new account</h1>
 
 <form action="/register" method="POST">
     <!--{% csrf_token %}-->
-    username: <input type="username" name="username">
-    <br>
-    password: <input type="password" name="password">
-    <input type="submit" value="login">
-    <br>
+    <b>Username:</b>
+    <p>
+        <input placeholder="Username" type="username" name="username">
+    </p>
+    <b>Password:</b>
+    <p>
+        <input placeholder="Password" type="password" name="password">
+    </p>
+    <input type="submit" value="register">
 </form>
+{% endblock %}
